@@ -1,10 +1,9 @@
 package futbol5;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class Socio {
+public class Socio implements Comparable<Socio>{
     private String nombre;
     private String apellido;
     private int edad;
@@ -23,6 +22,12 @@ public class Socio {
     }
     public String getApellido(){
         return apellido;
+    }
+    public int getEdad(){
+        return edad;
+    }
+    public int compareTo(Socio otro){
+        return this.getEdad()-otro.getEdad();
     }
     
 }
