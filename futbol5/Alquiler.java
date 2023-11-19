@@ -1,22 +1,20 @@
 package futbol5;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 
-public class Alquiler extends ElementoRegistro{
-    private ArrayList<ElementoRegistro> elementos;
 
-    public Alquiler(){
-        this.elementos = new ArrayList<>();
+public class Alquiler{
+    private LocalDate fecha;
+    private int id_cancha;
+    private double pago_alquiler;
+
+    public Alquiler(int id_cancha, double pago_alquiler){
+        this.id_cancha = id_cancha;
+        this.pago_alquiler = pago_alquiler;
+        this.fecha = LocalDate.now();
     }
-    @Override
-    public ArrayList<Cancha> canchasAlquilasSegunId(int id) {
-        ArrayList salida = new ArrayList<>();
-        for (ElementoRegistro e : elementos) {
-            ArrayList<Cancha> canchasQueCumplen = e.canchasAlquilasSegunId(id);
-            salida.addAll(canchasQueCumplen);
-        }
-        return salida;
-        
+    public int getIdCancha(){
+        return id_cancha;
     }
-    
+   
 }
