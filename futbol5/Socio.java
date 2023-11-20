@@ -3,7 +3,7 @@ package futbol5;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Socio implements Comparable<Socio>{
+public class Socio {
     private String nombre;
     private String apellido;
     private int edad;
@@ -26,8 +26,6 @@ public class Socio implements Comparable<Socio>{
     public int getEdad(){
         return edad;
     }
-    public int compareTo(Socio otro){
-        return this.getEdad()-otro.getEdad();
-    }
+  
     
 }
