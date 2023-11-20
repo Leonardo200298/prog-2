@@ -19,4 +19,7 @@ public class Alquiler{
     public double getPrecioAlquiler(){
         return precioAlquiler;
     }
+    public LocalDate getFecha(){
+        return fecha;
+    }
 }
