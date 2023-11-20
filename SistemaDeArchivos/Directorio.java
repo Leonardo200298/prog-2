@@ -1,6 +1,13 @@
 package SistemaDeArchivos;
 
+import java.util.ArrayList;
+
 public class Directorio extends ElementoSistema{
-    /* Los directorios tienen un nombre, una fecha de creación y además contienen un conjunto de
-archivos y un conjunto de subdirectorios. */
+    private ArrayList<ElementoSistema> elementos;
+
+    public Directorio(String nombre,double tamanio) {
+        super(nombre,tamanio);
+        this.elementos = new ArrayList<>();
+    }
+    
 }
