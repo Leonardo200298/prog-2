@@ -1,5 +1,6 @@
 package SistemaDeArchivos;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Archivo extends ElementoSistema{
@@ -11,14 +12,27 @@ public class Archivo extends ElementoSistema{
     }
 
     @Override
-    public int getTamanio() {
+    public double getTamanio() {
         // TODO Auto-generated method stub
-        return 1;
+        return super.tamanio;
     }
     @Override
     public ArrayList<ElementoSistema> buscar(Condicion condicion) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscar'");
+        ArrayList<ElementoSistema> salida = new ArrayList<>();
+        if (condicion.cumple(this)) {
+            salida.add(this);
+        }
+        return salida;
+    }
+
+    @Override
+    public String getNombre() {
+        return super.nombre;
+    }
+
+    @Override
+    public LocalDate getFechaDeCreacion() {
+        return super.fechaDeCreacion;
     }
   
 }

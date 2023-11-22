@@ -1,5 +1,6 @@
 package SistemaDeArchivos;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Link extends ElementoSistema{
@@ -9,10 +10,10 @@ public class Link extends ElementoSistema{
         
     }
     @Override
-    public int getTamanio() {
-        // TODO Auto-generated method stub
-        return 1;
+    public double getTamanio() {
+        return super.tamanio;
     }
+
     @Override
     public ArrayList<ElementoSistema> buscar(Condicion condicion) {
         ArrayList<ElementoSistema> salida = new ArrayList<>();
@@ -20,5 +21,13 @@ public class Link extends ElementoSistema{
             salida.add(this);
         }
         return salida;
+    }
+    @Override
+    public String getNombre() {
+        return super.nombre;
+    }
+    @Override
+    public LocalDate getFechaDeCreacion() {
+        return super.fechaDeCreacion; 
     }
 }
