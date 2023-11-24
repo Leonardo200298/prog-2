@@ -32,13 +32,7 @@ public class Directorio extends ElementoSistema{
         return salida;
     }
     public ArrayList<ElementoSistema> buscarConOrdenamiento(Condicion condicion, Comparator<ElementoSistema> comparador){
-      /*   ArrayList<ElementoSistema> salida = new ArrayList<>();
-        for (ElementoSistema it : elementos) {
-            if (condicion.cumple(this)){
 
-            }
-        }
-        return salida; */
         ArrayList <ElementoSistema> elementosConBusqueda = new ArrayList<>();
         elementosConBusqueda.addAll(this.buscar(condicion));
         if (elementosConBusqueda.size()>0) {
