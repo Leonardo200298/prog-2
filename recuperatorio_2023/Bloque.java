@@ -93,4 +93,13 @@ public class Bloque extends Tarjeta{
         return salida;
         
     }
+    public int cantidadDeTarjetas(){
+        int cantTarjetas = 0;
+        for (Tarjeta i : tarjetas) {
+            int cantidadDetarjetasDelPadre = i.cantidadDeTarjetas();
+            cantTarjetas+=cantidadDetarjetasDelPadre;
+        }
+        //porque si estoy en el hijo debo contar una por el padre
+        return super.cantidadDeTarjetas()+cantTarjetas;
+    }
 }
