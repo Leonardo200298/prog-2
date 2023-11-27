@@ -31,7 +31,9 @@ public class Comando extends Tarjeta{
         }
         return null;
     }
-
+    public String getInstruccion(){
+        return instruccion;
+    }
     @Override
     public ArrayList<String> getInstrucciones() {
         ArrayList<String> salida = new ArrayList<>();
