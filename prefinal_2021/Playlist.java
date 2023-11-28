@@ -11,7 +11,7 @@ public class Playlist extends ElementoSitio {
 
     public Playlist(String titulo, double demora){
         this.titulo = titulo;
-        this.demora = demora;
+      
         this.videos = new ArrayList<>();
     }
 
@@ -66,5 +66,14 @@ public class Playlist extends ElementoSitio {
         }
         return acumulador + this.demora;
     }
-   
+    public String getTitulo(){
+        return titulo;
+    }
+    
+    public void addElemento(ElementoSitio elementoSitio){
+        this.videos.add(elementoSitio);
+    }
+    public ArrayList<ElementoSitio> getVideos(){
+        return new ArrayList<>();
+    }
 }
