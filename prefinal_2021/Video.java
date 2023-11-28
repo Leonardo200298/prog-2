@@ -37,13 +37,37 @@ public class Video extends ElementoSitio implements Comparable<Video>{
     public String getUsuario(){
         return usuarioQueSubioElVideo;
     }
+    
+    /* Los listados deben devolverse ordenados por el nombre del usuario que subió el video,
+     */
     @Override
     public int compareTo(Video o) {
         return usuarioQueSubioElVideo.compareTo(o.getUsuario());
     }
 
-    /* Los listados deben devolverse ordenados por el nombre del usuario que subió el video,
-     */
-    
-    
+    @Override
+    public ArrayList<String> getPalabrasClave() {
+        ArrayList <String> salida = new ArrayList<>();
+        return salida;
+    }
+    public void addPalabrasClave(String palabraClave){
+        this.palabrasClave.add(palabraClave);
+    }
+     /* Palabras Clave. Se debe poder consultar la lista de palabras clave de un video, playlist
+    o grupo, sin
+repetidos. En el caso de las playlists y grupos, la lista de palabras clave queda definida por
+ la unión de
+todas las palabras clave de los elementos que contiene, sin repetidos. */
+
+    @Override
+    public int cantidadVideos() {
+        return 1;
+    }
+
+    @Override
+    public double duracionDeCancion() {
+        return duracion;
+    } 
+   
+   
 }
