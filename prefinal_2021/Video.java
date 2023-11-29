@@ -25,6 +25,28 @@ public class Video extends ElementoSitio implements Comparable<Video>{
         this.palabrasClave = new ArrayList<>();
     }
 
+    
+
+    public int getCantidadVisualizaciones() {
+        return cantidadVisualizaciones;
+    }
+
+
+
+    public int getAnioPublicacion() {
+        return anioPublicacion;
+    }
+
+
+    
+    public int getCantidadMG() {
+        return cantidadMG;
+    }
+
+    public boolean contienePalabraClave(String palabraClave){
+        return palabrasClave.contains(palabraClave);
+    }
+
     @Override
     public ArrayList<Video> buscar(Condicion c) {
         ArrayList <Video> salida = new ArrayList<>();
@@ -50,9 +72,7 @@ public class Video extends ElementoSitio implements Comparable<Video>{
         ArrayList <String> salida = new ArrayList<>();
         return salida;
     }
-    public void addPalabrasClave(String palabraClave){
-        this.palabrasClave.add(palabraClave);
-    }
+
      /* Palabras Clave. Se debe poder consultar la lista de palabras clave de un video, playlist
     o grupo, sin
 repetidos. En el caso de las playlists y grupos, la lista de palabras clave queda definida por
@@ -69,5 +89,9 @@ todas las palabras clave de los elementos que contiene, sin repetidos. */
         return duracion;
     } 
    
-   
+   public void addPalabrasClave(String palabraClave){
+        if (!palabrasClave.contains(palabraClave)){
+            palabrasClave.add(palabraClave);
+        }
+   }
 }

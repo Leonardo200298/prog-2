@@ -9,9 +9,9 @@ public class Playlist extends ElementoSitio {
     private ArrayList<ElementoSitio> videos;
     private double demora;
 
-    public Playlist(String titulo, double demora){
+    public Playlist(String titulo, double demora) {
         this.titulo = titulo;
-      
+
         this.videos = new ArrayList<>();
     }
 
@@ -19,10 +19,11 @@ public class Playlist extends ElementoSitio {
     public ArrayList<Video> buscar(Condicion c) {
         ArrayList<Video> salida = new ArrayList<>();
         for (ElementoSitio i : videos) {
-            if (c.cumple(i)) {
-                salida.addAll(i.buscar(c));
-            }
+
+            salida.addAll(i.buscar(c));
+
         }
+        Collections.sort(salida);
         return salida;
     }
 
@@ -48,12 +49,12 @@ public class Playlist extends ElementoSitio {
         }
         return salida;
     }
-   
+
     @Override
     public int cantidadVideos() {
         int acumulador = 0;
         for (ElementoSitio video : videos) {
-            acumulador+=video.cantidadVideos();
+            acumulador += video.cantidadVideos();
         }
         return acumulador;
     }
@@ -62,18 +63,20 @@ public class Playlist extends ElementoSitio {
     public double duracionDeCancion() {
         double acumulador = 0.0;
         for (ElementoSitio e : videos) {
-            acumulador+=e.duracionDeCancion();
+            acumulador += e.duracionDeCancion();
         }
         return acumulador + this.demora;
     }
-    public String getTitulo(){
+
+    public String getTitulo() {
         return titulo;
     }
-    
-    public void addElemento(ElementoSitio elementoSitio){
+
+    public void addElemento(ElementoSitio elementoSitio) {
         this.videos.add(elementoSitio);
     }
-    public ArrayList<ElementoSitio> getVideos(){
+
+    public ArrayList<ElementoSitio> getVideos() {
         return new ArrayList<>();
     }
 }
