@@ -27,4 +27,19 @@ public class Temporada {
         }
         return acumulador/episodios.size();
     }
+    public int getCantEpisodios(){
+       return episodios.size();
+    }
+    public boolean vioTodosLosEpisodios(){
+        boolean flag = false;
+        int i = 0;
+        while(!flag && i<episodios.size()){
+            if (!episodios.get(i).isVisto()) {
+                flag = false;
+                return flag;
+            }
+        i++;
+        }
+        return flag;
+    }
 }

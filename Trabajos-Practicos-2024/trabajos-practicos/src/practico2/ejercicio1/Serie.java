@@ -25,4 +25,26 @@ public class Serie {
     public double getPromedioTemporada(Temporada t){
         return t.promedioDeCalificacionDeEpisodio();
     }
+    public int getEpisodiosDeLaSerie(){
+        int count = 0;
+        for (Temporada t : temporadas) {
+            count += t.getCantEpisodios();
+        }
+        return count;
+    }
+    public double getPromedioPorSerie(Temporada t){
+        int acumulador = 0;
+        for (Temporada temporada : temporadas) {
+            acumulador+=temporada.promedioDeCalificacionDeEpisodio();
+        }
+        return acumulador/temporadas.size();
+    }
+    public boolean todosLosEpisodiosVistos(Temporada t){
+        for (Temporada temporada : temporadas) {
+            if (!temporada.vioTodosLosEpisodios()) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
