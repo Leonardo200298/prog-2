@@ -9,23 +9,27 @@ public class Pais {
     public Pais(){
         this.provincias = new ArrayList<>();
     }
+    /* las ciudades que gastan más de lo que recaudan,  */
     
-    public ArrayList<Ciudad> gastaMasDeLoQueRecaudan(Ciudad d){
-        ArrayList<Ciudad> aux = new ArrayList<>();
+    public ArrayList<Ciudad> ciudadesQueMasGastan(Ciudad c){
+        ArrayList<Ciudad> ciudadesQueMasGast = new ArrayList<>();
         for (Provincia p : provincias) {
-            if (p.gastaMasDeLoQueRecaudda(d)){
-                aux.add(d);
+            for (Ciudad ciudad : p.ciudadesQueMasGastan(c)) {
+                
+                ciudadesQueMasGast.add(ciudad);
             }
         }
-        return aux;
+        return ciudadesQueMasGast;
     }
-    public ArrayList<Provincia> provinciasConDeficit(){
-        ArrayList<Provincia> aux = new ArrayList<>();
-        for (Provincia provincia : provincias) {
-            if (provincia.ciudadesConDeficit()){
-                aux.add(provincia);
-            }
+    public ArrayList<Provincia> provinciasConMasDeLasCiudadesEnCrisis(Ciudad c){
+
+        ArrayList<Provincia> pmc = new ArrayList<>();
+        for (Provincia p : provincias) {
+           if (c.gastaMasDeLoQueRecauda(c) && p.masDeLasMitad(c)) {
+                pmc.add(p);
+           }
         }
-        return aux;
+        return pmc;
     }
+    /*   */
 }

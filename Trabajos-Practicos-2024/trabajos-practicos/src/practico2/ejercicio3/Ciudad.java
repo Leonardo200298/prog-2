@@ -1,5 +1,5 @@
 package practico2.ejercicio3;
-
+import java.util.ArrayList;
 public class Ciudad {
     private double imp1;
     private double imp2;
@@ -19,11 +19,13 @@ public class Ciudad {
         this.gastos = gastos;
         
     }
+    /* las ciudades que gastan más de lo que recaudan,  */
     public double recaudacion(){
         return this.imp1 + this.imp2 + this.imp3 + this.imp4 + this.imp5;
     }
-    public boolean gastaMasDeLoQueRecauda(){
-        return gastos > this.recaudacion();
+    public boolean gastaMasDeLoQueRecauda(Ciudad c){
+
+        return c.gastos>this.recaudacion();
     }
     public int getPoblacion(){
         return this.poblacion;
