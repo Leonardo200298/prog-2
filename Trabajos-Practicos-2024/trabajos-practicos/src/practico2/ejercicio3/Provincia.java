@@ -13,23 +13,30 @@ public class Provincia {
     public boolean ciudadesConDeficit(){
         int contador = 0;
         int contador2 = 0;
+  
         for (Ciudad ciudad : ciudades) {
             if (ciudad.gastaMasDeLoQueRecauda()) {
                 contador++;
             }else{
                 contador2++;
             }
+          
         }
         return contador>contador2;
     }
-
+    public boolean gastaMasDeLoQueRecaudda(Ciudad c){
+        return c.gastaMasDeLoQueRecauda();
+    }
     public ArrayList<Ciudad> masDeCienMilHabitantes(){
         ArrayList<Ciudad> aux = new ArrayList<>();
         for (Ciudad ciudad : ciudades) {
-            if (ciudad.getPoblacion() > corte) {
+            if (this.tieneMasDeCienMilHab(ciudad)) {
                 aux.add(ciudad);
             }
         }
         return aux;
+    }
+    public boolean tieneMasDeCienMilHab(Ciudad ciudad){
+        return ciudad.getPoblacion() > corte;
     }
 }
