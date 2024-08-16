@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Pais {
   
-    private ArrayList <Provincia> provincias;
 
     public Pais(){
         this.provincias = new ArrayList<>();
@@ -12,5 +11,7 @@ public class Pais {
     public ArrayList<Ciudad> ciudadesConMasDeCienHabitantes(Provincia p){
         return p.masDeCienMilHabitantes();
     }
-    
+    public boolean gastaMasDeLoQueRecaudan(Ciudad d){
+        return d.gastaMasDeLoQueRecauda();
+    }
 }
