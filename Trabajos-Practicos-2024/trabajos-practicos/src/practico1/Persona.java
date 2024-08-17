@@ -59,7 +59,8 @@ public class Persona{
         return (this.indiceDeMasaCorporal() > 18.5 && this.indiceDeMasaCorporal() < 25);
     }
     public boolean estaDeCumple(){
-        if (LocalDate.now().isEqual(fecha_de_nacimiento)) {
+        if (LocalDate.now().getMonth() == fecha_de_nacimiento.getMonth() && LocalDate.now().getDayOfMonth() == fecha_de_nacimiento.getDayOfMonth()) {
+                  
             return true;
         }else
             return false;
