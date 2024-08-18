@@ -3,33 +3,44 @@ package practico2.ejercicio3;
 import java.util.ArrayList;
 
 public class Pais {
-  
-    private ArrayList <Provincia> provincias;
+    private ArrayList<Provincia> provincias;
+    private int habitantesMinimos = 100000;
 
-    public Pais(){
+    public Pais() {
         this.provincias = new ArrayList<>();
     }
-    /* las ciudades que gastan más de lo que recaudan,  */
-    
-    public ArrayList<Ciudad> ciudadesQueMasGastan(Ciudad c){
-        ArrayList<Ciudad> ciudadesQueMasGast = new ArrayList<>();
+
+    public void addProvincia(Provincia p) {
+        provincias.add(p);
+    }
+
+    public ArrayList<Ciudad> getCiudadesMasGastadoras() {
+        ArrayList<Ciudad> aux = new ArrayList<>();
         for (Provincia p : provincias) {
-            for (Ciudad ciudad : p.ciudadesQueMasGastan(c)) {
-                
-                ciudadesQueMasGast.add(ciudad);
+            for (Ciudad ciudad : p.getCiudades()) {
+                if (ciudad.getPoblacion() > habitantesMinimos && ciudad.recaudacion() < 0) {
+                    aux.add(ciudad);
+                }
             }
         }
-        return ciudadesQueMasGast;
+        return aux;
     }
-    public ArrayList<Provincia> provinciasConMasDeLasCiudadesEnCrisis(Ciudad c){
 
-        ArrayList<Provincia> pmc = new ArrayList<>();
-        for (Provincia p : provincias) {
-           if (c.gastaMasDeLoQueRecauda(c) && p.masDeLasMitad(c)) {
-                pmc.add(p);
-           }
+    public ArrayList<Provincia> getProvinciasMasDeficit() {
+        ArrayList<Provincia> aux = new ArrayList<>();
+        ArrayList<Ciudad> aux2 = new ArrayList<>();
+        for (Provincia provincia : provincias) {
+            for (Ciudad c : provincia.getCiudades()) {
+                if (c.recaudacion() < 0 && c.getPoblacion() > habitantesMinimos) {
+                    aux2.add(c);
+                }
+            }
+            if (aux2.size() > (provincia.getCiudades().size() / 2)) {
+                aux.add(provincia);
+            }
+
         }
-        return pmc;
+        return aux;
     }
-    /*   */
+
 }

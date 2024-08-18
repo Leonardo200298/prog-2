@@ -3,36 +3,38 @@ package practico2.ejercicio3;
 import java.util.ArrayList;
 
 public class Provincia {
+    private String nombre;
     private ArrayList<Ciudad> ciudades;
-    private int corte;
 
-    public Provincia(int corte){
+    public Provincia(String nombre) {
+        this.setNombre(nombre);
         this.ciudades = new ArrayList<>();
-        this.corte = corte;
-    }
-    public ArrayList<Ciudad> ciudadesQueMasGastan(Ciudad c){
-        ArrayList<Ciudad> ciudadesGastadoras = new ArrayList<>();
-        for (Ciudad ciudad : ciudades) {
-            if (ciudad.gastaMasDeLoQueRecauda(c)) {
-                ciudadesGastadoras.add(ciudad);
-            }
-        }
-        return ciudadesGastadoras;
+
     }
 
-    public boolean masDeLasMitad(Ciudad c){
-        int contador = 0;
-        int contador2 = 0;
-        for (Ciudad ciudad : ciudades) {
-            
-            if (ciudad.gastaMasDeLoQueRecauda(c)) {
-                contador++;
-                
-            }else{
-                contador2++;
-            }
-        }
-      
-        return contador>contador2;
+    public String getNombre() {
+        return nombre;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public ArrayList<Ciudad> getCiudades() {
+        return ciudades;
+    }
+
+    public void setCiudades(ArrayList<Ciudad> ciudades) {
+        this.ciudades = ciudades;
+    }
+
+    public void addCiudad(Ciudad c) {
+        ciudades.add(c);
+    }
+
+    @Override
+    public String toString() {
+        return "Provincia: " + nombre;
+    }
+
 }

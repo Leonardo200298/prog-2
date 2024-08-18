@@ -38,5 +38,10 @@ public class Rectangulo{
     public boolean estaParado(){
         return this.l1 > this.l2;
     }
+
+    public ElementoGeometrico getRectangulo() {
+        return rectangulo;
+    }
+    
 }
 
