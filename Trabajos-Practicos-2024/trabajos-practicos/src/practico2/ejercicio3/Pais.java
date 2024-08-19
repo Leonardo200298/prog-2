@@ -16,7 +16,7 @@ public class Pais {
         ArrayList<Ciudad> ciudadesQueMasGast = new ArrayList<>();
         
         for (Provincia p : provincias) {
-            for (Ciudad ciudad : p.ciudadesQueMasGastan(c)) {
+            for (Ciudad ciudad : p.getCiudades()) {
                 if (ciudad.getPoblacion() < this.habitantesCiudad && ciudad.recaudacion() < ciudad.getGastos()) {
                     
                     ciudadesQueMasGast.add(ciudad);
@@ -25,18 +25,22 @@ public class Pais {
         }
         return ciudadesQueMasGast;
     }
-    public ArrayList<Provincia> provinciasConMasDeLasCiudadesEnCrisis(Ciudad c){
-
-        ArrayList<Provincia> pmc = new ArrayList<>();
+    public ArrayList<Provincia> provinciasConMasDeLasCiudadesEnCrisis(){
+        ArrayList<Provincia> arrP = new ArrayList<>();
+        ArrayList<Ciudad> arrC = new ArrayList<>();
+        
         for (Provincia p : provincias) {
             for (Ciudad ci : p.getCiudades()) {
-                if (ci.getPoblacion() < this.habitantesCiudad) {
-                        pmc.add(p);
+                if (ci.getPoblacion() < this.habitantesCiudad && ci.recaudacion() < ci.getGastos()) {
+                        arrC.add(ci);
                 }
                 
             }
+            if (p.getCiudades().size() < (arrC.size()/2)){
+                arrP.add(p);
+            }
         }
-        return pmc;
+        return arrP;
     }
 
 }
