@@ -27,5 +27,7 @@ public class Ciudad {
     public ArrayList<Impuesto> getImpuestos(){
         return this.impuestos;
     }
-  
+    public double getGastos(){
+        return this.gastos;
+    }
 }

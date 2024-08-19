@@ -17,8 +17,10 @@ public class Pais {
         
         for (Provincia p : provincias) {
             for (Ciudad ciudad : p.ciudadesQueMasGastan(c)) {
-                
-                ciudadesQueMasGast.add(ciudad);
+                if (ciudad.getPoblacion() < this.habitantesCiudad && ciudad.recaudacion() < ciudad.getGastos()) {
+                    
+                    ciudadesQueMasGast.add(ciudad);
+                }
             }
         }
         return ciudadesQueMasGast;
