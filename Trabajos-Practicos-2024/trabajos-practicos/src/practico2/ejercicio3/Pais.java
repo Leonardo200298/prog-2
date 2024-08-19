@@ -29,9 +29,12 @@ public class Pais {
 
         ArrayList<Provincia> pmc = new ArrayList<>();
         for (Provincia p : provincias) {
-           if (c.gastaMasDeLoQueRecauda(c) && p.masDeLasMitad(c)) {
-                pmc.add(p);
-           }
+            for (Ciudad ci : p.getCiudades()) {
+                if (ci.getPoblacion() < this.habitantesCiudad) {
+                        pmc.add(p);
+                }
+                
+            }
         }
         return pmc;
     }

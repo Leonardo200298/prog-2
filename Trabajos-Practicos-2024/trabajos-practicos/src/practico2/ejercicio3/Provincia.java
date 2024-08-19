@@ -35,4 +35,8 @@ public class Provincia {
       
         return contador>contador2;
     }
+
+    public ArrayList<Ciudad> getCiudades(){
+        return this.ciudades;
+    }
 }

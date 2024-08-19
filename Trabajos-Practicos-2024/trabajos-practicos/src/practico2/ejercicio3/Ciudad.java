@@ -5,7 +5,7 @@ public class Ciudad {
     private int poblacion;
     private double gastos;
 
-    public Ciudad(double imp1, double imp2, double imp3, double imp4, double imp5,int poblacion, double gastos){
+    public Ciudad(int poblacion, double gastos){
         this.impuestos = new ArrayList<>();
         this.poblacion = poblacion;
         this.gastos = gastos;
