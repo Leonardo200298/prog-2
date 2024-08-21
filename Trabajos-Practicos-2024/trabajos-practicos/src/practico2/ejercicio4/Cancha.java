@@ -12,4 +12,17 @@ public class Cancha {
         this.precioPorHora = precioPorHora;
         this.turnos = new ArrayList<>();
     }
+
+    public String getTipo() {
+        return this.tipo;
+    }
+
+    public double getPrecioPorHora() {
+        return this.precioPorHora;
+    }
+
+    public ArrayList<Turno> getTurnos(){
+        return this.turnos;
+    }
+    
 }

@@ -25,4 +25,5 @@ public class Usuario {
     public void setApellido(String apellido){
         this.apellido = apellido;
     }
+    
 }

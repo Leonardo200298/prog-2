@@ -5,10 +5,21 @@ import java.util.ArrayList;
 
 public class Turno {
     private LocalDate fecha;
-    private ArrayList<Usuario> usuarios;
 
-    public Turno(LocalDate fecha){
+    
+
+    public Turno(LocalDate fecha, boolean reserva){
         this.fecha = LocalDate.now();
-        this.usuarios = new ArrayList<>();
+        this.reserva = reserva;
     }
+
+    public LocalDate getFecha() {
+        return this.fecha;
+    }
+  
+    
+
+
+
+    
 }
