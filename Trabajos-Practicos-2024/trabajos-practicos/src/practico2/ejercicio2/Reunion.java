@@ -1,5 +1,7 @@
 package practico2.ejercicio2;
+
 import java.util.ArrayList;
+
 public class Reunion {
     private String lugar;
     private String tema;
@@ -11,6 +13,15 @@ public class Reunion {
         this.tema = tema;
         this.duracionMinutos = duracionMinutos;
         usuarios = new ArrayList<>();
+    }
+
+    public void addUsuario(Usuario uu) {
+        usuarios.add(uu);
+        uu.getAgenda().addReunion(this);
+    }
+
+    public ArrayList<Usuario> getInvitados() {
+        return usuarios;
     }
 
     public String getLugar() {
@@ -36,7 +47,5 @@ public class Reunion {
     public void setDuracionMinutos(int duracionMinutos) {
         this.duracionMinutos = duracionMinutos;
     }
-    
 
-    
 }
