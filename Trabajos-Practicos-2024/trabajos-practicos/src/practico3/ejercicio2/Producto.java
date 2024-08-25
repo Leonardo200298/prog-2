@@ -64,7 +64,7 @@ public class Producto {
         return this.tasaDeRecarga;
     }
     public double getValorDeVenta(){
-        return this.costoFabricacion()*this.getTasaDeRecarga();
+        return this.getCostoFabricacion()*this.getTasaDeRecarga();
     }
     
 }

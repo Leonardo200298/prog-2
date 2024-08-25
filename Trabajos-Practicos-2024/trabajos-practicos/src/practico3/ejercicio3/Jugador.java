@@ -32,7 +32,12 @@ public class Jugador {
     public void setNombrePJ(String nombrePJ) {
         this.nombrePJ = nombrePJ;
     }
-
+    public ArrayList<Caracteristica> getCaracteristicas() {
+        return caracteristicas;
+    }
+    public void setCaracteristicas(Caracteristica cc){
+        this.caracteristicas.add(cc);
+    }
     
 
 
