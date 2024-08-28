@@ -39,6 +39,7 @@ public class Jugador {
         this.caracteristicas.add(cc);
     }
     
+ 
 
 
 }
