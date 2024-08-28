@@ -32,4 +32,7 @@ public class JugarPartida {
         }
         return jugadorGanador;
     }
+    public Jugador jugar(int t){
+        return new Jugador(null,null,null);
+    }
 }
