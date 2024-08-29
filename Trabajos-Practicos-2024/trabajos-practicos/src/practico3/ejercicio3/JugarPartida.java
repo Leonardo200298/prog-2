@@ -21,12 +21,12 @@ public class JugarPartida {
                 if (c1.getAltura()==c2.getAltura()) {
                     j1.setCaracteristicas(c1);
                     j2.setCaracteristicas(c2);
-                    if (c1!=c2) {
-                        System.out.println("deben ser las mismas caracteristicas: ");
-                        j1.setCaracteristicas(c1);
-                        j2.setCaracteristicas(c2);
-                        
-                    }
+                }
+                if (c1!=c2) {
+                    System.out.println("deben ser las mismas caracteristicas: ");
+                    j1.setCaracteristicas(c1);
+                    j2.setCaracteristicas(c2);
+                    
                 }
             }
         }
