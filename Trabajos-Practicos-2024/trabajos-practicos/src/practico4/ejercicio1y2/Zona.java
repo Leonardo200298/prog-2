@@ -10,7 +10,7 @@ public class Zona {
         this.lugar = lugar;
         this.sensores = new ArrayList<>();
     }
-
+    
     public String getLugar() {
         return lugar;
     }
@@ -27,6 +27,16 @@ public class Zona {
         }
         return false;
     }
+
+    public ArrayList<Sensor> getSensores() {
+        return sensores;
+    }
+
+    public void setSensores(ArrayList<Sensor> sensores) {
+        this.sensores.addAll(sensores);
+       
+    }
+    
     
     
 }
