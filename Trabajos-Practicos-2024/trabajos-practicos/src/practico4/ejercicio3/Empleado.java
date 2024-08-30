@@ -1,39 +1,22 @@
 package practico4.ejercicio3;
 
 public class Empleado {
-    private double horasTrabajadas;
-    private SueldoPorVentas tipoSueldo;
-    private int ventas;
 
-    public Empleado (double horasTrabajadas, SueldoPorVentas tipoSueldo, int ventas){
-        this.horasTrabajadas = horasTrabajadas;
-        this.tipoSueldo = tipoSueldo;
-        this.ventas = ventas;
-    }
-    public void setVentas(){
-        tipoSueldo.setVentas(ventas);
-    }
-    public double getSueldo(){
-        
-        return tipoSueldo.getSalario();
-    }
+    private double sueldo;
+    
 
-    public double getHorasTrabajadas() {
-        return horasTrabajadas;
+    public Empleado (double sueldo){
+        this.sueldo = sueldo; 
     }
-    public void setHorasTrabajadas(double horasTrabajadas) {
-        this.horasTrabajadas = horasTrabajadas;
+    public double getSalario(){
+        return this.sueldo;
     }
-    public int getVentas() {
-        return ventas;
+    
+    public void setSueldo(double sueldo){
+        this.sueldo = sueldo;
+
     }
-  
-    public Sueldo getTipoSueldo() {
-        return tipoSueldo;
-    }
-    public void setTipoSueldo(SueldoPorVentas tipoSueldo) {
-        this.tipoSueldo = tipoSueldo;
-    }
+    
 
     
     
