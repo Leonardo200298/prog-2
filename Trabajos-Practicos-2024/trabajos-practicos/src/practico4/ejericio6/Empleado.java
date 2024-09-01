@@ -66,6 +66,6 @@ public class Empleado{
 
     }
     public void registrarUsuario(){
-        //registro al ususario
+        //registro al usuario
     }
 }
