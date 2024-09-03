@@ -1,45 +1,18 @@
 package practico4.ejericio6;
-import java.util.ArrayList;
-public class Empleado{
-    private String nombre;
-    private String apellido;
-    private int edad;
+public class Empleado extends Persona{
+
     private int nro_legajo;
     private double sueldo;
     private String cargo;
-    private ArrayList<UsuarioFinal> usuariosRegistrados;
+  
     public Empleado(String nombre, String apellido, int edad, int nro_legajo, double sueldo, String cargo) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-     
+      
+        super(nombre,apellido, edad);
         this.nro_legajo = nro_legajo;
         this.sueldo = sueldo;
         this.cargo = cargo;
     }
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
     public int getNro_legajo() {
         return nro_legajo;
     }
@@ -65,7 +38,5 @@ public class Empleado{
         this.cargo = "Empleado";
 
     }
-    public void registrarUsuario(){
-        //registro al usuario
-    }
+
 }

@@ -4,23 +4,23 @@ import java.util.ArrayList;
 
 public class Empresa {
     
-    private ArrayList<Empleado> empleados;
+    private ArrayList<Persona> empleados;
 
     public Empresa(){
         this.empleados = new ArrayList<>();
     }
 
-    public ArrayList<Empleado> getEmpleados(){
+    public ArrayList<Persona> getEmpleados(){
         return this.empleados;
     }
 
-    public void agregarEmpleado(Empleado pp){
+    public void agregarEmpleado(Persona pp){
         this.getEmpleados().add(pp);
     }
     
     public String cadenaDePersonas(){
         String resultado = "";
-        for (Empleado persona : this.getEmpleados()) {
+        for (Persona persona : this.getEmpleados()) {
             resultado += "Nombre: " + persona.getNombre() + "\n";
             resultado += "Apellido: " + persona.getApellido() + "\n";
             resultado += "Edad: " + persona.getEdad() + "\n";
