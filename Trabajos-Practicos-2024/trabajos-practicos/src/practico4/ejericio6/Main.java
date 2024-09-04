@@ -13,7 +13,7 @@ public class Main {
         ee.agregarEmpleado(empleado);
         ee.agregarEmpleado(empleado2);
         ee.agregarEmpleado(jerarquicoP);
-
+        System.out.println(empleado);
         System.out.println(ee.cadenaDePersonas());
         
         
