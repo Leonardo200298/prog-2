@@ -10,7 +10,7 @@ public class Ciudad {
     public Ciudad(){
         this.contribuyentes = new ArrayList<>();
     }
-
+    
     public ArrayList<Contribuyente> getContribuyentes() {
         return contribuyentes;
     }
