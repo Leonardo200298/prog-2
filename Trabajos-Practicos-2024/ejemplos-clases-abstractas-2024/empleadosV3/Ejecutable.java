@@ -3,7 +3,6 @@ package empleadosV3;
 public class Ejecutable {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Empleado e1 = new Empleado("jj",1);
 		Empleado e2 = new Empleado("aa",2);
@@ -23,7 +22,6 @@ public class Ejecutable {
 		
 		e3.setCalculador(new CalculadorSueldoFijo(20000));
 		
-
 		System.out.println(ee.totalSueldos());
 		//System.out.println(((Empleado)e2).getSueldo());
 		

@@ -12,7 +12,7 @@ public class Empresa {
 	
 	public void addEmpleado(Empleado ee) {
 		if (!empleados.contains(ee))
-				empleados.add(ee);
+			empleados.add(ee);
 	}
 	
 	public double totalSueldos() {
