@@ -21,7 +21,28 @@ public class Cliente {
         this.descuento = descuento;
     }
 
+    public boolean comproProducto(Producto pp){
+        boolean flag = false;
+        int i = 0;
+        while (!flag && i < listaDeCompras.size()) {
+            if (listaDeCompras.get(i).equals(pp)) {
+                flag = true;
+            }
+            i++;
+        }
+        return flag;
+    }
 
+
+    public boolean leGusta(Producto pp){
+        String autor = pp.getAutor();
+        if (this.listaAutoresFavoritos.contains(autor)) {
+            
+            return true;
+        }
+    
+        return false;
+    }
 
     public void setListaDeAutoresFavoritos(String autor){
         this.listaAutoresFavoritos.add(autor);
