@@ -12,6 +12,11 @@ public class Cultivo {
 
     public boolean puedeTratar(ProductoQuimico pp){
         //provisorio
+        for (Enfermedad enfermedad : this.enfermedades) {
+            if (enfermedad.getEstadosPatologicosQueTrataELProductoQuimico().contains(pp)) {
+                return true;
+            }
+        }
         return false;
     }
 }

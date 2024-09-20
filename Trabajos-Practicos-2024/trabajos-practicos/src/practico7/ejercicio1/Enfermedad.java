@@ -3,5 +3,13 @@ import java.util.ArrayList;
 
 public class Enfermedad {
     private String nombre;
-    private ArrayList<String> estadosPatologicosQueTrataELProductoQuimico;
+    private ArrayList<ProductoQuimico> estadosPatologicosQueTrataELProductoQuimico;
+
+    public void llenarEstadosPatologicos(ProductoQuimico pp){
+        this.estadosPatologicosQueTrataELProductoQuimico.add(pp);
+    }
+
+    public ArrayList<ProductoQuimico> getEstadosPatologicosQueTrataELProductoQuimico(){
+        return new ArrayList<>(estadosPatologicosQueTrataELProductoQuimico);
+    }
 }
