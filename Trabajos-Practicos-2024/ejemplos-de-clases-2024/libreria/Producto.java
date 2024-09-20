@@ -91,15 +91,7 @@ public class Producto {
 	}
 
 	public ArrayList<String> getGeneros(){
-/*		ArrayList<String> genCopia = new ArrayList<String>();
-		genCopia.addAll(generos);
-		return genCopia;
-*/
-	/*	ArrayList<String> genCopia = new ArrayList<String>(generos);
-		return genCopia;
-	*/
-	
-		//return (ArrayList<String>)generos.clone();
+
 		return 	new ArrayList<String>(generos);
 	}
 
