@@ -3,16 +3,16 @@ import java.util.ArrayList;
 
 public class ProductoQuimico {
     private String nombre;
-    private ArrayList<String> cultivosQueSeDesaconsejan;
     private ArrayList<String> estadosPatologicos;
     
 
     public ProductoQuimico(String nombre) {
         this.nombre = nombre;
-        this.cultivosQueSeDesaconsejan = new ArrayList<>();
         this.estadosPatologicos = new ArrayList<>();
     }
-
+    public ArrayList<String> getEstadosPatologicos(){
+        return new ArrayList<>(estadosPatologicos);
+    }
     public String getNombre() {
         return nombre;
     }

@@ -11,7 +11,7 @@ public class Cultivo {
     }
 
     public boolean puedeTratar(ProductoQuimico pp){
-        //provisorio
+
         for (Enfermedad enfermedad : this.enfermedades) {
             if (enfermedad.getEstadosPatologicosQueTrataELProductoQuimico().contains(pp)) {
                 return true;
@@ -19,4 +19,13 @@ public class Cultivo {
         }
         return false;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
 }

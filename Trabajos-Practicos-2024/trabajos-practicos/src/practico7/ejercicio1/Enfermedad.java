@@ -12,4 +12,13 @@ public class Enfermedad {
     public ArrayList<ProductoQuimico> getEstadosPatologicosQueTrataELProductoQuimico(){
         return new ArrayList<>(estadosPatologicosQueTrataELProductoQuimico);
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
 }
