@@ -8,9 +8,9 @@ public class CartaPaquete extends ElementoEnvio{
 
     
 
-    public CartaPaquete(String ciudadDestino, String destinarioDireccion, String remitenteDireccion,
+    public CartaPaquete(String ciudadDestino,int numeroTraking, String destinarioDireccion, String remitenteDireccion,
             String retiroEnSucursal, double peso) {
-        super(ciudadDestino);
+        super(ciudadDestino,numeroTraking);
         this.destinarioDireccion = destinarioDireccion;
         this.remitenteDireccion = remitenteDireccion;
         this.retiroEnSucursal = retiroEnSucursal;

@@ -7,9 +7,29 @@ public class ComboPostal extends ElementoEnvio{
 
     
 
-    public ComboPostal(String ciudadDestino) {
-        super(ciudadDestino);
+    public ComboPostal(String ciudadDestino, int numeroTraking) {
+        super(ciudadDestino, numeroTraking);
         this.envios = new ArrayList<>();
+    }
+
+    public boolean mismaCiudad(ElementoEnvio ee) {
+        
+        for (ElementoEnvio elementosEnvios : envios) {
+            if (!ee.getCiudadDestino().equals(elementosEnvios.getCiudadDestino())) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public void agregarElementoEnvio(ElementoEnvio ee){
+        if (this.mismaCiudad(ee)) {
+            for (ElementoEnvio elementoEnvio : envios) {
+                elementoEnvio.setNumeroTraking(ee.getNumeroTraking());
+                
+            }
+            this.envios.add(ee);
+        }
     }
 
     @Override
@@ -17,5 +37,9 @@ public class ComboPostal extends ElementoEnvio{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getPeso'");
     }
+
+
+
+    
     
 }
