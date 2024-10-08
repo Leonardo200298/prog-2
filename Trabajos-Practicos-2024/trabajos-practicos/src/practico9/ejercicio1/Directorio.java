@@ -36,7 +36,7 @@ public class Directorio extends ElementoSA{
     public ArrayList<ElementoSA> busqueda(Condicion ee) {
         ArrayList<ElementoSA> salida = new ArrayList<>();
         for (ElementoSA elemento : archivos) {
-            salida.addAll(elemento.busqueda(ee);
+            salida.addAll(elemento.busqueda(ee));
             
         }
         return salida;
