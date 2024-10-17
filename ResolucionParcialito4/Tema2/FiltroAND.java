@@ -7,8 +7,8 @@ public class FiltroAND extends Filtro {
         this.f2 = f2;
     }
 
-    public boolean cumple(Cancion cc) {
-        return f1.cumple(cc) && f2.cumple(cc);
+    public boolean cumple(Pelicula pp) {
+        return f1.cumple(pp) && f2.cumple(pp);
     }
 
 }

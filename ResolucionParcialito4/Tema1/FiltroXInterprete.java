@@ -1,4 +1,4 @@
-public class FiltroXInterprete extends Filtro {
+public class FiltroXInterprete extends FiltroCancion {
     private String interprete;
 
     public FiltroXInterprete(String interprete) {

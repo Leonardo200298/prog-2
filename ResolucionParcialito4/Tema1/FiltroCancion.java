@@ -1,3 +1,3 @@
-public abstract class Filtro {
+public abstract class FiltroCancion {
     public abstract boolean cumple(Cancion cc);
 }

@@ -1,13 +1,13 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Usuario {
+public class UsuarioCancion {
     private String nombre;
     private LocalDate nacimiento;
     private ArrayList<Cancion> canciones;
-    private Filtro preferencias;
+    private FiltroCancion preferencias;
 
-    public Usuario(String nombre, LocalDate nacimiento) {
+    public UsuarioCancion(String nombre, LocalDate nacimiento) {
         this.nombre = nombre;
         this.nacimiento = nacimiento;
         canciones = new ArrayList<>();

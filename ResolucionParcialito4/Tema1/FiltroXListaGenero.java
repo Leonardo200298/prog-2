@@ -1,4 +1,4 @@
-public class FiltroXListaGenero extends Filtro {
+public class FiltroXListaGenero extends FiltroCancion {
     private String genero;
 
     public FiltroXListaGenero(String genero) {

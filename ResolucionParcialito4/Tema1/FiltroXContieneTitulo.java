@@ -1,4 +1,4 @@
-public class FiltroXContieneTitulo extends Filtro {
+public class FiltroXContieneTitulo extends FiltroCancion {
     private String palabra;
 
     public FiltroXContieneTitulo(String palabra) {
