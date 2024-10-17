@@ -1,8 +1,8 @@
-public class FiltroOR extends FiltroCancion {
+public class FiltroORCancion extends FiltroCancion {
     private FiltroCancion f1;
     private FiltroCancion f2;
 
-    public FiltroOR(FiltroCancion f1, FiltroCancion f2) {
+    public FiltroORCancion(FiltroCancion f1, FiltroCancion f2) {
         this.f1 = f1;
         this.f2 = f2;
     }

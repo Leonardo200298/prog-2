@@ -1,7 +1,7 @@
-public class FiltroXListaGenero extends FiltroCancion {
+public class FiltroXListaGeneroCancion extends FiltroCancion {
     private String genero;
 
-    public FiltroXListaGenero(String genero) {
+    public FiltroXListaGeneroCancion(String genero) {
         this.genero = genero;
     }
 

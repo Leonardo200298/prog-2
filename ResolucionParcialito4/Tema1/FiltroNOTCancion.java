@@ -1,7 +1,7 @@
-public class FiltroNOT extends FiltroCancion {
+public class FiltroNOTCancion extends FiltroCancion {
     private FiltroCancion f1;
 
-    public FiltroNOT(FiltroCancion f1) {
+    public FiltroNOTCancion(FiltroCancion f1) {
         this.f1 = f1;
 
     }

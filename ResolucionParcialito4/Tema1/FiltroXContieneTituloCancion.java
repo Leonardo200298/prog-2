@@ -1,7 +1,7 @@
-public class FiltroXContieneTitulo extends FiltroCancion {
+public class FiltroXContieneTituloCancion extends FiltroCancion {
     private String palabra;
 
-    public FiltroXContieneTitulo(String palabra) {
+    public FiltroXContieneTituloCancion(String palabra) {
         this.palabra = palabra;
     }
 
