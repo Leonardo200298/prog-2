@@ -1,14 +1,18 @@
 package practico8.ejercicio1;
 
+import java.time.LocalDate;
+
 public class Link extends ElementoSA{
     private String direccion;
     private int tamanio;
-    public Link(String direccion){
-        super();
-        this.direccion = direccion;
-        this.tamanio = 1;
-    }
+  
     
+    public Link(String nombre, LocalDate fechaCreacion, String direccion, int tamanio) {
+        super(nombre, fechaCreacion);
+        this.direccion = direccion;
+        this.tamanio = tamanio;
+    }
+
     @Override
     public int getTamanio() {
         return this.tamanio;
@@ -20,6 +24,11 @@ public class Link extends ElementoSA{
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    @Override
+    public int cantidadDeElementos() {
+        return 1;
     }
     
 }
